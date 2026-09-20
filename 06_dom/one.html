@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+document.getElementById('title')
+<h1 id=​"title" class=​"heading test">​…​</h1>​
+document.getElementById('title').id
+'title'
+document.getElementById('title').className
+'heading'
+document.getElementById('title').class
+undefined
+document.getElementById('title').getAttribute('id')
+'title'
+document.getElementById('title').getAttribute('class')
+'heading'
+document.getElementById('title').getAttribute('class', 'heading test')
+'heading'
+document.getElementById('title').setAttribute('class', 'heading test')
+undefined
+document.getElementById('title').getAttribute('class')
+'heading test'
+
+const title = document.getElementById('title')
+title.style.backgroundColor = 'red'
+title.setAttribute('style', 'background-color: red; color: white;')
+title.setAttribute('class', 'heading test bg-black')
+
+title.innerText is same as title.textContent but innerText is aware of styling and will not return the text of hidden elements, while textContent will return all text regardless of styling even some text is hidden or set as display: none;.
+
+innerHTML is different from innerText and textContent, it will return the HTML content of the element, including any child elements and their attributes. For example, if you have an element with nested HTML tags, innerHTML will return the entire HTML structure, while innerText and textContent will only return the visible text content.    
+
+
+document.querySelector('h1') // returns the first h1 element in the document
+
+
+document.querySelectorAll('h2') // returns a NodeList of all h2 elements in the document, which can be iterated over using a loop or converted to an array for further manipulation. but not a pure array by default
+
+const temp = document.querySelectorAll('li')
+temp[0].style.backgroundColor = "red"
+
+getElementsByClassName('list-item') // returns a live HTMLCollection of all elements with the class name "list-item". This collection is automatically updated when elements are added or removed from the document, so it always reflects the current state of the DOM. However, it does not have array methods like forEach or map, so you may need to convert it to an array if you want to use those methods.   
+
+Array.from(document.getElementsByClassName('list-item')) // converts the HTMLCollection to an array, allowing you to use array methods like forEach, map, filter, etc. This is useful when you want to manipulate or iterate over the elements in a more flexible way.wwwww
