@@ -23,7 +23,7 @@ const obj1 = {1: "a", 2: "b", 7 : {4 : "d"}}
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 
-const obj3 = { obj1, obj2 } // problem it create nested object
+// const obj3 = { obj1, obj2 } // problem it create nested object
 // const obj3 = Object.assign({}, obj1, obj2, obj4);   //target, source1, source2, sourceN
 
 // const obj3 = {...obj1, ...obj2}

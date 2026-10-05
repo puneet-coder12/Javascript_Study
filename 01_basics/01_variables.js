@@ -1,4 +1,4 @@
-const accountId = 144553
+// const accountId = 144553
 let accountEmail = "hitesh@google.com"
 var accountPassword = "12345"
 accountCity = "Jaipur"
@@ -11,7 +11,7 @@ accountEmail = "hc@hc.com"
 accountPassword = "21212121"
 accountCity = "Bengaluru"
 
-// console.log(accountId);
+console.log(accountId);
 
 /*
 Prefer not to use var
